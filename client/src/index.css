@@ -1,4 +1,447 @@
+/* Imported fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Global Styles */
 body {
   margin: 0;
-  padding: 1em;
+  padding: 0;
+  color: #6a8c78; /* Dark pastel pink */
+  background: #fffff7; /* Light pastel pink */
+  font-family: "Playfair Display", serif; /* Luxurious font */
 }
+
+/* Header style */
+header {
+  background-color: #f0a6ca; /* Medium pastel pink */
+  color: #6a8c78; /* Dark pastel pink */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+/* Home page Background */
+.home-page {
+  background-image: url('/image/3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1800px;
+}
+
+/* Login/Signup styling */
+.login-signup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  background: rgba(232, 232, 232, 0.21); /* Light pastel pink background */
+  padding: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.login-container,
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: rgba(255, 240, 245, 0.8); /* Light pastel pink background */
+  padding: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.login-container h2,
+.signup-container h2 {
+  margin-bottom: 1rem;
+}
+
+.input-field {
+  border-radius: 1rem;
+  border-color: #f0a6ca; /* Medium pastel pink */
+  padding: 0.4rem;
+}
+
+/* Footer styling */
+.footer {
+  color: #fff;
+  background-color: #f0a6ca; /* Medium pastel pink */
+  text-align: center;
+  padding: 2rem 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer .footer-github {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer_inner {
+  color: #e1ebdf;
+}
+
+/* Cart header styling */
+.cartPage {
+  color: #ba56c6; /* Dark pastel pink */
+  margin: 20px 0 0 30px;
+}
+
+.header-shopNow {
+  color: #ba56c6; /* Dark pastel pink */
+  margin-left: 30px;
+}
+
+.cart {
+  margin: 0.5rem 1rem 1rem 2rem;
+}
+
+/* Jewelry styling */
+.jewelryPost {
+  width: auto;
+  background: rgba(255, 240, 245, 0.8); /* Light pastel pink background */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  border: 1px solid #f0a6ca; /* Medium pastel pink border */
+}
+
+.jewelry {
+  padding: 1rem;
+  border-radius: 2rem;
+  padding-bottom: 2rem;
+  transition: .3s ease all;
+  cursor: pointer;
+}
+
+.jewelry-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted sizing for responsiveness */
+  gap: 4rem;
+  margin: 30px 20px 160px;
+}
+
+.jewelry-img {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.jewelry-img img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* Ensure the entire image is visible without cropping */
+}
+
+.jewelry-footer {
+  display: block;
+  height: 100px;
+  align-items: flex-end;
+  margin: 1rem 1rem 1rem 2rem;
+  justify-content: space-between;
+  overflow: scroll;
+  position: relative;
+}
+
+.jewelry-footer h3,
+.jewelry-footer h4 {
+  margin: 0.5rem 0; /* Adjust margin to control space between lines */
+  line-height: 1.2; /* Adjust line-height to control the space within each line */
+}
+
+.jewelry-header {
+  font-family: "Playfair Display", serif; /* Luxurious font */
+  margin-left: 30px;
+}
+
+.jewelry-sub-header {
+  font-family: "Playfair Display", serif; /* Luxurious font */
+  margin-left: 30px;
+}
+
+/* Nav links styling */
+.nav {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-link {
+  color: #fff;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-left: 2rem;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Playfair Display", serif; /* Luxurious font */
+}
+
+.welcome {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Playfair Display", serif; /* Luxurious font */
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  text-decoration: underline;
+}
+
+/* Delete Styling */
+.btn-delete {
+  background: #ea5a5a;
+  color: white;
+  display: inline-block;
+  width: fit-content;
+  padding: 0.1rem 0.3rem;
+  border: none;
+  border-radius: 4rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+
+.btn-delete:hover {
+  background-color: #ff1c1c;
+}
+
+/* Search container */
+.searchcontainer {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  margin-top: 20%;
+}
+
+.searchinput {
+  margin-left: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(15, 80, 116);
+  border: 0.7px solid;
+  border-radius: 16px;
+  padding-left: 12px;
+  height: 30px;
+  width: 300px;
+  background-color: rgba(255, 240, 245, 0.8); /* Light pastel pink background */
+}
+
+.searchinput:focus,
+.searchinput:active {
+  outline: 0.7px invert;
+  color: rgb(17, 44, 103);
+}
+
+/* Payment form styling */
+.payment {
+  background-color: #b4f2d6; /* Light pastel green */
+  color: #333;
+  padding: 60px;
+  border-radius: 12px;
+  border: 4px solid #1c8b5d; /* Dark pastel green border */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  margin: 0 0 150px 30px;
+}
+
+.payment input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.payment button {
+  background-color: #1c8b5d; /* Dark pastel green */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment button:hover {
+  background-color: #13643f; /* Darker shade of pastel green */
+}
+
+/* Product card styling */
+.product-card {
+  background: rgba(255, 240, 245, 0.8); /* Light pastel pink background */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.product-card p {
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.product-card .price {
+  color: #ba56c6; /* Dark pastel pink */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Button styling */
+.btn {
+  background-color: #f0a6ca; /* Medium pastel pink */
+  color: #6a8c78; /* Dark pastel pink */
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e188b6; /* Lighter shade of pastel pink */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .welcome {
+    margin-left: 0;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .login-signup-container {
+    top: 40%;
+    right: 5%;
+    width: 90%;
+  }
+
+  .payment {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .searchcontainer {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .welcome {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-signup-container {
+    top: 30%;
+    right: 5%;
+    width: 90%;
+  }
+
+  .payment {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .searchcontainer {
+    margin-left: 5%;
+  }
+}
+
