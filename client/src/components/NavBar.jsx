@@ -16,6 +16,11 @@ export default function NavBar({ currentUser }){
 
                     <NavLink className="nav-link" to='/blog'>Blog</NavLink> 
 
+                    <NavLink className="nav-link" to='/bestsellers'>Best Sellers</NavLink>
+
+                    <NavLink className="nav-link" to='/contact'>Contact</NavLink> 
+
+
                     
                     <div className="user-info">
                         {currentUser ? (

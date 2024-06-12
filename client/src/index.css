@@ -12,8 +12,8 @@ body {
 
 /* Header style */
 header {
-  background-color: #f0a6ca; /* Medium pastel pink */
-  color: #6a8c78; /* Dark pastel pink */
+  background-color: #BED7DC;
+  color:#fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,7 +59,7 @@ header {
   top: 50%;
   right: 10%;
   transform: translateY(-50%);
-  background: rgba(232, 232, 232, 0.21); /* Light pastel pink background */
+  background:#BED7DC;
   padding: 2rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
@@ -72,7 +72,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  background: rgba(255, 240, 245, 0.8); /* Light pastel pink background */
+  background:#BED7DC;
   padding: 2rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
@@ -94,7 +94,7 @@ header {
 /* Footer styling */
 .footer {
   color: #fff;
-  background-color: #f0a6ca; /* Medium pastel pink */
+  background-color: #BED7DC;
   text-align: center;
   padding: 2rem 0;
   position: fixed;

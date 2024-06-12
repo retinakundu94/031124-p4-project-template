@@ -1,4 +1,4 @@
-//React
+// main.jsx
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
@@ -13,8 +13,8 @@ import ShopNow from './components/ShopNow.jsx'
 import PaymentPage from './components/PaymentPage.jsx'
 import Blog from './components/Blog.jsx';  // Import Blog component
 import BlogPost from './components/BlogPost.jsx';  // Import Post component
-
-
+import ContactPage from './components/ContactPage.jsx'; // Import ContactPage component
+import BestSellers from './components/BestSellers.jsx'; // Import BestSellers component
 
 // CSS
 import './index.css'
@@ -64,10 +64,19 @@ const routes = [
         element: <BlogPost />, 
         errorElement: <ErrorPage />,
       },
+      {
+        path: 'contact', 
+        element: <ContactPage />, 
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'bestsellers', 
+        element: <BestSellers />, 
+        errorElement: <ErrorPage />,
+      },
     ],
   },
 ];
-
 
 //router
 const router = createBrowserRouter(routes)
