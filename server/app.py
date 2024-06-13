@@ -2,7 +2,7 @@
 
 from flask import request, session
 from config import app, db, bcrypt, SQLAlchemy
-from models import User, Carts, Items, BlogPost
+from models import User, Carts, Items, BlogPost, Feedback
 from flask_sqlalchemy import SQLAlchemy
 import sqlalchemy
 import stripe
@@ -199,6 +199,28 @@ def delete_blogpost(id):
         return {}, 204
     else:
         return {'error': 'Not found'}, 404
+    
+#add feedback submitted by new user    
+@app.post(URL_PREFIX + '/feedback')
+def submit_feedback():
+    try:
+        user_id = session.get('user_id')
+        if not user_id:
+            return {'error': 'User not logged in'}, 401
+
+        feedback = Feedback(
+            user_id=user_id,
+            name=request.json.get('name'),
+            email=request.json.get('email'),
+            feedback=request.json.get('feedback')
+        )
+
+        db.session.add(feedback)
+        db.session.commit()
+        return feedback.to_dict(), 201
+
+    except Exception as e:
+        return {'error': str(e)}, 406
 
 @app.post(URL_PREFIX + '/create-payment-intent')
 def create_payment():

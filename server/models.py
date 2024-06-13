@@ -9,10 +9,11 @@ class User (db.Model, SerializerMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, nullable=False)
-    password = db.Column(db.String, nullable=False)
+    _hashed_password = db.Column(db.String, nullable=False)
     age = db.Column(db.Integer)
 
     carts = db.relationship('Carts', back_populates='user')
+    feedbacks = db.relationship('Feedback', back_populates='user')
 
     @validates('username')
     def validate_username(self, key, value):
@@ -37,7 +38,7 @@ class User (db.Model, SerializerMixin):
         else:
             raise ValueError('Must be at least 13 years old!')
         
-    serialize_rules = ('-carts.user',)
+    serialize_rules = ('-carts.user', '-feedbacks.user',)
 
 class Items (db.Model, SerializerMixin):
     __tablename__ = "items"
@@ -70,3 +71,16 @@ class BlogPost(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)
     content = db.Column(db.Text, nullable=False)
+
+class Feedback(db.Model, SerializerMixin):
+    __tablename__ = "feedback"
+
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    name = db.Column(db.String, nullable=False)
+    email = db.Column(db.String, nullable=False)
+    feedback = db.Column(db.Text, nullable=False)
+
+    user = db.relationship('User', back_populates='feedbacks')
+
+    serialize_rules = ('-user.feedbacks',)

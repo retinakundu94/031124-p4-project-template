@@ -17,13 +17,32 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here, e.g., send data to server
-        console.log('Form data submitted:', formData);
-        // Optionally reset the form
-        setFormData({
-            name: '',
-            email: '',
-            feedback: ''
+
+        fetch('/api/feedback', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (response.ok) {
+                response.json().then(data => {
+                    console.log('Form data submitted:', data);
+                    // Optionally reset the form
+                    setFormData({
+                        name: '',
+                        email: '',
+                        feedback: ''
+                    });
+                });
+            } else {
+                alert('Error submitting form');
+            }
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
         });
     };
 
