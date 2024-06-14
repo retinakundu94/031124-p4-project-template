@@ -13,7 +13,7 @@ const Post = () => {
   const post = posts[id];
 
   return (
-    <div>
+    <div className="blog-card">
       <h1>{post.title}</h1>
       <p>{post.content}</p>
     </div>

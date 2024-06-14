@@ -2,22 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 /* Global Styles */
-body {
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  overflow: auto; /* Ensure scrolling is allowed */
+  font-family: "Playfair Display", serif; /* Luxurious font */
   color: #6a8c78; /* Dark pastel pink */
   background: #fffff7; /* Light pastel pink */
-  font-family: "Playfair Display", serif; /* Luxurious font */
 }
 
 /* Header style */
 header {
   background-color: #BED7DC;
-  color:#fff;
+  color: #fff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  padding: 2rem;
   max-width: 100%;
   height: auto;
 }
@@ -26,7 +27,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 50%;
 }
 
 .logo h1 {
@@ -39,56 +40,66 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure full viewport height */
   display: flex;
   flex-direction: column;
+  overflow: auto; /* Allow scrolling within the page */
 }
 
 .container {
   width: 90%;
   margin: 0 auto;
   max-width: 1800px;
+  padding: 20px; /* Add padding as needed */
+  flex-grow: 1; /* Allow container to grow and fill available space */
+  overflow: auto; /* Allow content to scroll if it exceeds container height */
 }
 
-/* Login/Signup styling */
-.login-signup-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  transform: translateY(-50%);
-  background:#BED7DC;
-  padding: 2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+/* Contact Form */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
 }
 
-.login-container,
-.signup-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  background:#BED7DC;
-  padding: 2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+form div {
+  margin-bottom: 10px;
 }
 
-.login-container h2,
-.signup-container h2 {
-  margin-bottom: 1rem;
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.input-field {
-  border-radius: 1rem;
-  border-color: #f0a6ca; /* Medium pastel pink */
-  padding: 0.4rem;
+form input,
+form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+form textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+form button {
+  background-color: #6a8c78; /* Dark pastel pink */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form button:hover {
+  background-color: #526e5a; /* Darker shade of pastel pink */
 }
 
 /* Footer styling */
@@ -119,6 +130,51 @@ header {
 .footer_inner {
   color: #e1ebdf;
 }
+/* Login/Signup styling */
+.login-signup-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  gap: 1rem;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  background: #BED7DC;
+  padding: 0.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  width: 300px; /* Adjust width to fit both buttons comfortably */
+}
+
+.login-container,
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #BED7DC;
+  padding: 0.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  flex-grow: 1;
+}
+
+.login-container h2,
+.signup-container h2 {
+  margin-bottom: 0.5rem;
+}
+
+.input-field {
+  border-radius: 8px;
+  border-color: #f0a6ca;
+  padding: 0.3rem;
+  font-size: 14px;
+}
+
 
 /* Cart header styling */
 .cartPage {
@@ -136,16 +192,6 @@ header {
 }
 
 /* Jewelry styling */
-.jewelryPost {
-  width: auto;
-  background: rgba(255, 240, 245, 0.8); /* Light pastel pink background */
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.7px);
-  -webkit-backdrop-filter: blur(3.7px);
-  border: 1px solid #f0a6ca; /* Medium pastel pink border */
-}
-
 .jewelry {
   padding: 1rem;
   border-radius: 2rem;
@@ -156,10 +202,15 @@ header {
 
 .jewelry-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted sizing for responsiveness */
-  gap: 4rem;
-  margin: 30px 20px 160px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: calc(100vh - 200px); /* Adjust based on your layout */
 }
+
+
+
 
 .jewelry-img {
   height: 300px;
@@ -205,19 +256,19 @@ header {
 /* Nav links styling */
 .nav {
   display: grid;
-  place-items: center;
-  position: fixed;
+  /*place-items: center; 
+  position: relative; */
   cursor: pointer;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 90%;
   z-index: 100;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
 }
 
@@ -275,8 +326,8 @@ header {
 
 /* Search container */
 .searchcontainer {
-  display: flex;
-  align-items: center;
+  display: grid;
+  align-items: left;
   margin-left: 30px;
   margin-top: 20%;
 }
@@ -295,7 +346,7 @@ header {
 
 .searchinput:focus,
 .searchinput:active {
-  outline: 0.7px invert;
+  outline  : 0.7px invert;
   color: rgb(17, 44, 103);
 }
 
@@ -336,11 +387,11 @@ header {
 
 /* Product card styling */
 .product-card {
-  background: rgba(255, 240, 245, 0.8); /* Light pastel pink background */
-  border-radius: 16px;
+  /*background: rgba(255, 240, 245, 0.8); /* Light pastel pink background */
+  /*border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease;*/
 }
 
 .product-card:hover {
@@ -378,6 +429,24 @@ header {
 .btn:hover {
   background-color: #e188b6; /* Lighter shade of pastel pink */
 }
+
+.btn-logout {
+  margin-left: 10px; /* Adjust margin as needed */
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #e188b6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove default underline */
+}
+
+.btn-logout:hover {
+  background-color: #e188b6; /* Darker red on hover */
+}
+
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
@@ -443,5 +512,116 @@ header {
   .searchcontainer {
     margin-left: 5%;
   }
+}
+
+/* Adjusted container for search bar and items */
+.search-bar-container {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px; /* Adjust margin as needed */
+}
+
+/* Filters container */
+.filters {
+  display: flex;
+  flex-direction: column; /* Stack filters vertically */
+  align-items: flex-start; /* Align filters to the left */
+  gap: .1px; /* Reduce space between each filter */
+  width: 300px; /* Fixed width for the filters container */
+  margin-right: 20px; /* Space between filters and items */
+}
+
+/* Ensuring the items container takes the remaining space */
+.items-container {
+  flex-grow: 1; /* Allow this container to take up remaining space */
+}
+
+/* Adjusted Jewelry container */
+.jewelry-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted sizing for responsiveness */
+  gap: 1rem; /* Adjust gap between items */
+  margin: 0;
+  width: 100%;
+}
+
+/* Search input adjustments */
+.searchinput {
+  margin: 0; /* Remove margin */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(15, 80, 116);
+  border: 0.7px solid;
+  border-radius: 16px;
+  padding: 5px 12px; /* Adjust padding */
+  height: 30px;
+  width: 100%; /* Ensure inputs take full width */
+  background-color: rgba(255, 240, 245, 0.8); /* Light pastel pink background */
+}
+
+.searchinput:focus,
+.searchinput:active {
+  outline: 0.7px invert;
+  color: rgb(17, 44, 103);
+}
+
+/* Optional: Adjust the header margin for better spacing */
+.jewelry-sub-header {
+  margin: 0; /* Remove margin to minimize space */
+  margin-bottom: 5px; /* Add a small margin below the header */
+}
+
+/* Reduce margin for search containers */
+.searchcontainer {
+  margin-bottom: 10px; /* Reduce space between search sections */
+}
+
+/* Ensure footer stays at the bottom */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex-grow: 1;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+/* Blog Article */
+.BlogArticle {
+  background-color: lightblue;
+}
+
+/* CSS for Blog Cards */
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Space between cards */
+}
+
+.blog-card {
+  background-color: #fff; /* Card background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  padding: 20px; /* Padding inside the card */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.blog-card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+}
+
+.blog-card h2 {
+  font-size: 1.5rem; /* Title font size */
+  margin-bottom: 10px; /* Space below title */
+}
+
+.blog-card p {
+  font-size: 1rem; /* Content font size */
+  line-height: 1.5; /* Line height for readability */
+  color: #666; /* Text color */
 }
 

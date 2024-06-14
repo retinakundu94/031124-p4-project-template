@@ -16,13 +16,21 @@ export default function Header() {
             <h1 >AMARA JEWELS</h1>
             </Link>
         </div>
-        <NavBar currentUser={currentUser} />
-        {currentUser && (
+        
+        
+      </div>
+      <br/>
+      <div> <NavBar currentUser={currentUser} /> </div>
+      
+      <div>
+      {currentUser && (
           <button onClick={logout} className="btn-logout">
             Logout
           </button>
         )}
-      </div>
+        </div>
+
     </header>
+    
   );
 }
