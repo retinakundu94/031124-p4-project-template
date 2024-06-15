@@ -75,6 +75,7 @@ export default function SearchBar({ items, userId }) {
                     />
                 </section>
             </div>
+            {/* end filters container */}
             <div className="items-container">
                 <section className="jewelry">
                     <div className="jewelry-container">

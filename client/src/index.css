@@ -6,6 +6,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  padding-bottom: 3rem;
   overflow: auto; /* Ensure scrolling is allowed */
   font-family: "Playfair Display", serif; /* Luxurious font */
   color: #6a8c78; /* Dark pastel pink */
@@ -15,10 +16,10 @@ html, body {
 /* Header style */
 header {
   background-color: #BED7DC;
-  color: #fff;
+  color: #F8F6E3; /* Default text color in the header */
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
   max-width: 100%;
   height: auto;
 }
@@ -32,13 +33,14 @@ header {
 
 .logo h1 {
   margin: 0;
+  color: #F8F6E3; /* Specific color for the h1 element */
 }
 
 /* Home page Background */
 .home-page {
-  background-image: url('/image/3.jpg');
+  background-image: url('/images/Homepage.jpeg');
   background-size: cover;
-  background-position: center;
+  background-position: 0 -5rem;
   background-repeat: no-repeat;
   min-height: 100vh; /* Ensure full viewport height */
   display: flex;
@@ -104,10 +106,10 @@ form button:hover {
 
 /* Footer styling */
 .footer {
-  color: #fff;
+  color: #F8F6E3; /* Match the text color in the header */
   background-color: #BED7DC;
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -115,6 +117,7 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 20px; /* Adjust left padding for spacing */
 }
 
 .footer .footer-links {
@@ -128,8 +131,21 @@ form button:hover {
 }
 
 .footer_inner {
-  color: #e1ebdf;
+  color: #e1ebdf; /* This can be adjusted as needed */
 }
+
+.footer a {
+  color: inherit; /* Ensure links inherit parent color */
+  text-decoration: none; /* Remove default underline */
+  border-bottom: 1px solid transparent; /* Add transparent border bottom */
+  transition: border-bottom-color 0.2s ease; /* Smooth transition for underline */
+}
+
+.footer a:hover {
+  border-bottom-color: #F8F6E3; /* Color for underline on hover */
+}
+
+
 /* Login/Signup styling */
 .login-signup-container {
   display: flex;
@@ -178,12 +194,12 @@ form button:hover {
 
 /* Cart header styling */
 .cartPage {
-  color: #ba56c6; /* Dark pastel pink */
+  color: #BED7DC; /* Match the text color of your website */
   margin: 20px 0 0 30px;
 }
 
 .header-shopNow {
-  color: #ba56c6; /* Dark pastel pink */
+  color: #BED7DC; /* Match the text color of your website */
   margin-left: 30px;
 }
 
@@ -205,8 +221,7 @@ form button:hover {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
   padding: 1rem;
-  overflow-y: auto; /* Enable vertical scrolling */
-  max-height: calc(100vh - 200px); /* Adjust based on your layout */
+  /* overflow-y: auto; Enable vertical scrolling */
 }
 
 
@@ -273,11 +288,13 @@ form button:hover {
 }
 
 .nav-link {
-  color: #fff;
+  color: #F8F6E3; /* Set the color to Amara Jewels color */
   list-style: none;
   display: flex;
   gap: 1rem;
   margin-left: 2rem;
+  position: relative; /* Ensure relative positioning for absolute elements */
+  text-decoration: none; /* Remove default underline */
 }
 
 .nav-links li {
@@ -286,13 +303,18 @@ form button:hover {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: #F8F6E3; /* Set the color to Amara Jewels color */
   font-family: "Playfair Display", serif; /* Luxurious font */
+  position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+.nav-links a:hover {
+  text-decoration: underline; /* Underline on hover */
 }
 
 .welcome {
   text-decoration: none;
-  color: #fff;
+  color: #F8F6E3; /* Set the color to Amara Jewels color */
   font-family: "Playfair Display", serif; /* Luxurious font */
   margin-left: 2rem;
   display: flex;
@@ -302,8 +324,9 @@ form button:hover {
 
 .nav-link:hover,
 .nav-link.active {
-  text-decoration: underline;
+  text-decoration: none; /* Remove underline when active or hovered */
 }
+
 
 /* Delete Styling */
 .btn-delete {
@@ -332,17 +355,19 @@ form button:hover {
   margin-top: 20%;
 }
 
+/* Search input adjustments */
 .searchinput {
-  margin-left: 10px;
+  margin: 0; /* Remove margin */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(15, 80, 116);
   border: 0.7px solid;
   border-radius: 16px;
-  padding-left: 12px;
+  padding: 5px 12px; /* Adjust padding */
   height: 30px;
-  width: 300px;
+  width: 100%; /* Ensure inputs take full width */
   background-color: rgba(255, 240, 245, 0.8); /* Light pastel pink background */
 }
+
 
 .searchinput:focus,
 .searchinput:active {
@@ -352,11 +377,11 @@ form button:hover {
 
 /* Payment form styling */
 .payment {
-  background-color: #b4f2d6; /* Light pastel green */
-  color: #333;
+  background-color: #F8F6E3; /* Light cream */
+  color: #496989; /* Dark blue */
   padding: 60px;
   border-radius: 12px;
-  border: 4px solid #1c8b5d; /* Dark pastel green border */
+  border: 4px solid #496989; /* Dark blue border */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   width: 40%;
   margin: 0 0 150px 30px;
@@ -372,14 +397,20 @@ form button:hover {
 }
 
 .payment button {
-  background-color: #1c8b5d; /* Dark pastel green */
-  color: #fff;
+  background-color: #F8F6E3; /* Light cream */
+  color: #496989; /* Dark blue */
   border: none;
   border-radius: 8px;
   padding: 12px 24px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.payment button:hover {
+  background-color: #9BB0C1; /* Light blue */
+  color: #F8F6E3; /* Light cream */
+}
+
 
 .payment button:hover {
   background-color: #13643f; /* Darker shade of pastel green */
@@ -431,20 +462,20 @@ form button:hover {
 }
 
 .btn-logout {
-  margin-left: 10px; /* Adjust margin as needed */
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #e188b6;
-  border: none;
-  border-radius: 5px;
+  background-color: #F8F6E3; /* Light cream background */
+  color: #496989; /* Dark blueish-gray text color */
+  border: 2px solid #496989; /* Dark blueish-gray border */
+  padding: 8px 16px; /* Adjust padding for a smaller button */
+  font-size: 14px; /* Match font size with the rest of the page */
   cursor: pointer;
-  text-decoration: none; /* Remove default underline */
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  margin-top: 20px; /* Adjust margin to lower the button */
 }
 
 .btn-logout:hover {
-  background-color: #e188b6; /* Darker red on hover */
+  background-color: #496989; /* Dark blueish-gray background on hover */
+  color: #F8F6E3; /* Light cream text color on hover */
 }
 
 
@@ -514,11 +545,39 @@ form button:hover {
   }
 }
 
+/* cart page payment button */
+.btn-process {
+  background-color: #F8F6E3;
+  color: #496989;
+  border: 2px solid #496989; /* Matching border color */
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  display: inline-block; /* Ensure inline-block display to control positioning */
+  margin-top: 20px; /* Adjust vertical margin as needed */
+  margin-left: 10px; /* Adjust horizontal margin to move it slightly to the left */
+  text-decoration: none; /* Remove default underline */
+}
+
+.btn-process:hover {
+  background-color: #EDE8D9;
+}
+
+.btn-process:active {
+  transform: translateY(2px); /* Adjust the amount of vertical shift on click */
+}
+
+
+
+
 /* Adjusted container for search bar and items */
 .search-bar-container {
   display: flex;
   align-items: flex-start;
   margin: 20px; /* Adjust margin as needed */
+  
 }
 
 /* Filters container */
@@ -529,6 +588,9 @@ form button:hover {
   gap: .1px; /* Reduce space between each filter */
   width: 300px; /* Fixed width for the filters container */
   margin-right: 20px; /* Space between filters and items */
+  position: sticky;
+  top: 0;
+ 
 }
 
 /* Ensuring the items container takes the remaining space */
@@ -625,3 +687,7 @@ form button:hover {
   color: #666; /* Text color */
 }
 
+.shopnow {
+  position: sticky;
+  top: 0;
+}

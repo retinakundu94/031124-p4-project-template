@@ -18,9 +18,7 @@ function JewelryContainer({}){
     }, [])
 
     return (
-        <div >
-            <SearchBar items ={items}/>   
-        </div>
+        <SearchBar items ={items}/>   
     )
 }
 

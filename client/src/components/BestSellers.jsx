@@ -21,14 +21,13 @@ function BestSellers() {
   return (
     <div>
       <h1>Best Sellers</h1>
-      <ul>
+      
         < SearchBar items = {items} />
         
-      </ul>
+     
     </div>
   );
 }
 
 export default BestSellers;
-
 
