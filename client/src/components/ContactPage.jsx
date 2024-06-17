@@ -4,7 +4,7 @@ import ContactForm from './ContactForm';
 
 const ContactPage = () => {
     return (
-        <div>
+        <div className="contactus-title">
             <h1>Contact Us</h1>
             <ContactForm />
         </div>

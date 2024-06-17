@@ -1,6 +1,6 @@
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
-function PaymentForm({ userName, setToggle }) {
+function PaymentForm({ userName, setUserName, setToggle }) {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -17,8 +17,7 @@ function PaymentForm({ userName, setToggle }) {
     if (!error) {
       console.log("Payment successful!", paymentMethod);
       setToggle(true);
-    } 
-    else {
+    } else {
       console.log("Payment processing failed. Please try again.");
     }
   };
@@ -27,7 +26,12 @@ function PaymentForm({ userName, setToggle }) {
     <form className='payment' onSubmit={handleSubmit}>
       <div className="input-container">
         <label htmlFor="nameInput">Enter Your Name:</label>
-        <input id="nameInput" type="text" value={userName} />
+        <input 
+          id="nameInput" 
+          type="text" 
+          value={userName} 
+          onChange={(e) => setUserName(e.target.value)} 
+        />
       </div>
       <CardElement />
       <button type="submit" disabled={!stripe}>Pay</button>
@@ -36,5 +40,6 @@ function PaymentForm({ userName, setToggle }) {
 }
 
 export default PaymentForm;
+
 
 

@@ -58,50 +58,62 @@ header {
 }
 
 /* Contact Form */
-form {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.contact-form {
+  background-color: #F8F6E3; /* Light cream */
+  color: #496989; /* Dark blue */
+  padding: 60px;
+  border-radius: 12px;
+  border: 4px solid #496989; /* Dark blue border */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 20px auto;
 }
 
-form div {
-  margin-bottom: 10px;
+.contactus-title h1 {
+  margin-left: 30px;
 }
 
-form label {
+.contact-form div {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
+  color: #496989; /* Dark blue */
 }
 
-form input,
-form textarea {
-  width: calc(100% - 20px);
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
   font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
-form textarea {
+.contact-form textarea {
+  height: 150px; /* Larger height for the feedback box */
   resize: vertical; /* Allow vertical resizing */
 }
 
-form button {
-  background-color: #6a8c78; /* Dark pastel pink */
-  color: #fff;
+form button, form input[type=submit] {
+  background-color: #496989; /* Dark blue */
+  color: #F8F6E3; /* Light cream */
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-form button:hover {
-  background-color: #526e5a; /* Darker shade of pastel pink */
+form button:hover, form input[type=submit]:hover {
+  background-color: #9BB0C1; /* Light blue */
+  color: #F8F6E3; /* Light cream */
 }
 
 /* Footer styling */
@@ -149,57 +161,81 @@ form button:hover {
 /* Login/Signup styling */
 .login-signup-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center; /* Center items vertically */
-  gap: 1rem;
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  transform: translateY(-50%);
-  background: #BED7DC;
-  padding: 0.5rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+  padding: 2rem;
   border-radius: 12px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  width: 300px; /* Adjust width to fit both buttons comfortably */
+  width: 100vw; /* Adjust width to fit both forms comfortably */
+  justify-content: center;
+  align-items: center;
 }
 
-.login-container,
-.signup-container {
+.login-container, .signup-container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  background: #BED7DC;
-  padding: 0.5rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  gap: 1.2rem;
+  background: #F8F6E3; /* Light cream */
+  padding: 1.5rem; /* Adjust padding to make the boxes shorter */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 4px solid #496989; /* Dark blue border */
   flex-grow: 1;
+  max-width: 300px; /* Limit the width of each form */
 }
 
-.login-container h2,
-.signup-container h2 {
-  margin-bottom: 0.5rem;
+.login-container h2, .signup-container h2 {
+  margin-bottom: 1rem;
+  color: #496989; /* Dark blue */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  text-align: center;
 }
 
 .input-field {
   border-radius: 8px;
-  border-color: #f0a6ca;
-  padding: 0.3rem;
-  font-size: 14px;
+  border: 2px solid #ddd;
+  padding: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #496989; /* Dark blue */
+  color: #F8F6E3; /* Light cream */
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #9BB0C1; /* Light blue */
+  color: #F8F6E3; /* Light cream */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: #F8F6E3; /* Light cream */
+  padding: 1.5rem; /* Adjust padding to make the boxes shorter */
+  height: 15rem;
+
+  border-radius: 12px;
+
+  max-width: 300px; /* Limit the width of each form */
+  margin: 0 auto; /* Center the forms horizontally */
 }
 
 
 /* Cart header styling */
 .cartPage {
-  color: #BED7DC; /* Match the text color of your website */
+  color: #6a8c78; /* Match the text color of your website */
   margin: 20px 0 0 30px;
 }
 
 .header-shopNow {
-  color: #BED7DC; /* Match the text color of your website */
+  color: #6a8c78; /* Match the text color of your website */
   margin-left: 30px;
 }
 
@@ -652,9 +688,14 @@ form button:hover {
   margin-top: auto;
 }
 
+/* Container for moving the content to the right */
+.blog-container {
+  margin-left: 30px; /* Adjust this value as needed */
+}
+
 /* Blog Article */
 .BlogArticle {
-  background-color: lightblue;
+  background-color: #F8F6E3; /* Light cream */
 }
 
 /* CSS for Blog Cards */
@@ -665,11 +706,12 @@ form button:hover {
 }
 
 .blog-card {
-  background-color: #fff; /* Card background color */
+  background-color: #F8F6E3; /* Light cream */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
   padding: 20px; /* Padding inside the card */
   transition: transform 0.3s ease; /* Smooth transition on hover */
+  border: 4px solid #496989; /* Dark blue border */
 }
 
 .blog-card:hover {
@@ -679,15 +721,28 @@ form button:hover {
 .blog-card h2 {
   font-size: 1.5rem; /* Title font size */
   margin-bottom: 10px; /* Space below title */
+  color: #496989; /* Dark blue */
 }
+
+
 
 .blog-card p {
   font-size: 1rem; /* Content font size */
   line-height: 1.5; /* Line height for readability */
-  color: #666; /* Text color */
+  color: #496989; /* Dark blue */
 }
 
+.blog-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: end;
+}
 .shopnow {
   position: sticky;
   top: 0;
+}
+
+.bestsellers-header {
+  margin-left: 30px;
 }

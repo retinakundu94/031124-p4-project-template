@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react"
 import SearchBar from "./SearchBar"
 
-function JewelryContainer({}){
+function JewelryContainer({ jewelryImages }){
 
     const URL = '/api/items'
     

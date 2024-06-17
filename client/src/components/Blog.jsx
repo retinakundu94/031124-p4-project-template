@@ -22,6 +22,7 @@ const Blog = () => {
 
   return (
     <BlogContainer>
+      <div className="blog-header">
       <h1>Blog</h1>
       <div style={{
         marginLeft: '10px',
@@ -53,6 +54,8 @@ const Blog = () => {
           }}
         />
       </div>
+      </div>
+      
       <div className="blog-cards">
         {filteredPosts.map(post => (
           <div key={post.id} className="blog-card">

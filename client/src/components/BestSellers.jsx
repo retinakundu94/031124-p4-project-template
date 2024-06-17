@@ -19,7 +19,7 @@ function BestSellers() {
   }, []);
 
   return (
-    <div>
+    <div className = "bestsellers-header" >
       <h1>Best Sellers</h1>
       
         < SearchBar items = {items} />
