@@ -9,14 +9,14 @@ export default function NavBar({ currentUser }){
             <nav>
             <div className="container nav-container">
                     <Link className="nav-link" to='/'>Home</Link>
+
+                    <NavLink className="nav-link" to='/shopnow'>Shop Now</NavLink>
                     
                     <NavLink className="nav-link" to='/cart'>Cart</NavLink>
-                   
-                    <NavLink className="nav-link" to='/shopnow'>ShopNow</NavLink>
-
-                    <NavLink className="nav-link" to='/blog'>Blog</NavLink> 
 
                     <NavLink className="nav-link" to='/bestsellers'>Best Sellers</NavLink>
+
+                    <NavLink className="nav-link" to='/blog'>Blog</NavLink> 
 
                     <NavLink className="nav-link" to='/contact'>Contact</NavLink> 
 

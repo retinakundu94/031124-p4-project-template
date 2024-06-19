@@ -8,10 +8,13 @@ export default function Footer() {
                 <Link className="footer_inner" to="/">Home</Link>
                 <Link className="footer_inner" to="/cart">Cart</Link>
                 <Link className="footer_inner" to="/shopnow">Shop Now</Link>
-                <Link className="footer_inner" to="/userPanel">Login</Link>
+                <Link className="footer_inner" to="/bestsellers">Best Sellers</Link> 
+               
                 <Link className="footer_inner" to="/blog">Blog</Link>
+
                 <Link className="footer_inner" to="/contact">Contact</Link>
-                <Link className="footer_inner" to="/bestsellers">Best Sellers</Link> {/* Added link to Best Sellers */}
+               
+                <Link className="footer_inner" to="/userPanel">Login</Link>
             </div>
         </div>
     );

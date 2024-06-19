@@ -12,7 +12,7 @@ export default function CartPage() {
                 if (res.ok) {
                     return res.json();
                 } else {
-                    throw new Error('Failed to fetch cart items');
+                    throw new Error('Your cart is currently empty.');
                 }
             })
             .then(data => {

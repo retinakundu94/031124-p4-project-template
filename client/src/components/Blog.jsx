@@ -6,9 +6,9 @@ const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const posts = [
-    { id: 1, title: 'First Post', summary: 'This is the summary of the first post' },
-    { id: 2, title: 'Second Post', summary: 'This is the summary of the second post' },
-    { id: 3, title: 'Third Post', summary: 'This is the summary of the third post' },
+    { id: 1, title: 'The Birth of Amara Jewels: My Entrepreneurship Journey', summary: 'Discover the inspiring journey behind the creation of Amara Jewels, from a passion for jewelry to building a successful business.' },
+    { id: 2, title: 'Building a Strong Brand Identity for Your Jewelry Business', summary: 'Learn how to create a memorable brand identity, including developing a compelling brand story and maintaining consistency.' },
+    { id: 3, title: 'Effective Marketing Strategies for Your Jewelry Business', summary: 'Explore various marketing strategies to promote your jewelry business, from leveraging social media to hosting events.' },
   ];
 
   const handleSearchChange = (e) => {
