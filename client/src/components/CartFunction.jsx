@@ -10,10 +10,8 @@ import {Link} from "react-router-dom"
 
 export default function CartFunction({itemId}){
     console.log("itemId",itemId)
-    // console.log("userId",userId)
     const [itemCount, setItemCount]= useState(0)
-    // const [userId, setUserId] = useState ('')
-    // const [itemId, setItemId] = useState ('')
+
 
     const handleClickAdd = ()=>{
         setItemCount(itemCount + 1);

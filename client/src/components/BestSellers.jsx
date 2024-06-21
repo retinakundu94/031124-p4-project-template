@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar"
 
 function BestSellers() {
   const [items, setItems] = useState([]);
-  const bestSellerIds = [1, 4, 6, 7, 8, 10, 12]; // Manually specify the best seller item IDs
+  const bestSellerIds = [1, 4, 6, 7, 8, 10, 12]; 
 
   
   useEffect(() => {

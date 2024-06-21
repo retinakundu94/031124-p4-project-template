@@ -30,7 +30,6 @@ const ContactForm = () => {
             if (response.ok) {
                 response.json().then(data => {
                     console.log('Form data submitted:', data);
-                    // Optionally reset the form
                     setFormData({
                         name: '',
                         email: '',

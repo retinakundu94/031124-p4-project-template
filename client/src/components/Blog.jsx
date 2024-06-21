@@ -34,7 +34,7 @@ const Blog = () => {
         height: '30px',
         width: '300px',
         backgroundColor: 'rgba(255, 240, 245, 0.8)',
-        marginBottom: '20px' // Additional style for spacing
+        marginBottom: '20px' 
       }}>
         <input
           type="text"
@@ -42,15 +42,15 @@ const Blog = () => {
           value={searchQuery}
           onChange={handleSearchChange}
           style={{
-            border: 'none', // Override border style from parent div
-            height: '100%', // Ensure input fills the container height
-            width: '100%', // Ensure input fills the container width
-            outline: 'none', // Remove outline on focus
-            background: 'none', // Remove default background
-            fontFamily: 'inherit', // Inherit font family from parent
-            fontSize: 'inherit', // Inherit font size from parent
-            color: 'inherit', // Inherit color from parent
-            paddingLeft: '12px' // Maintain left padding
+            border: 'none', 
+            height: '100%', 
+            width: '100%', 
+            outline: 'none', 
+            background: 'none', 
+            fontFamily: 'inherit', 
+            fontSize: 'inherit', 
+            color: 'inherit',
+            paddingLeft: '12px' 
           }}
         />
       </div>

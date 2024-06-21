@@ -26,7 +26,7 @@ function Signup({setCurrentUser}){
           })
         }
 
-    // this coverts the string to int
+    
     const handleAgeChange = (e) => {
         const value = e.target.value;
         setAge(value === '' ? '' : parseInt(value, 10));
